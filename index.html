@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Kütüphane Yönetim Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Kişisel Kütüphane Yönetim Sistemi</h1>
+    <button id="addBookBtn">Kitap Ekle</button>
+    <div id="book-list"></div>
+
+    <div id="book-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Yeni Kitap Ekle</h2>
+            <form id="book-form">
+                <input type="text" id="title" placeholder="Kitap Başlığı" required>
+                <input type="text" id="author" placeholder="Yazar" required>
+                <textarea id="description" placeholder="Açıklama"></textarea>
+                <input type="text" id="imageUrl" placeholder="Görsel URL" required>
+                <button type="submit">Ekle</button>
+                <button type="button" id="closeModal">Kapat</button>
+                <input type="text" id="publisher" placeholder="Yayınevi" required>
+<input type="number" id="year" placeholder="Yıl" required>
+            </form>
+        </div>
+    </div>
+
+    <div id="update-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Kitap Güncelle</h2>
+            <form id="update-form">
+                <input type="hidden" id="update-id">
+                <input type="text" id="update-title" placeholder="Kitap Başlığı" required>
+                <input type="text" id="update-author" placeholder="Yazar" required>
+                <textarea id="update-description" placeholder="Açıklama"></textarea>
+                <input type="text" id="update-imageUrl" placeholder="Görsel URL" required>
+                <button type="submit">Güncelle</button>
+                <input type="text" id="update-publisher" placeholder="Yayınevi" required>
+                <input type="number" id="update-year" placeholder="Yıl" required>
+                <button type="button" id="closeUpdateModal">Kapat</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
